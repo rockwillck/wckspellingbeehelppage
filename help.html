@@ -1,1 +1,99 @@
-<h1>Hi</h1>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:150%;
+        margin:20px;
+        text-align:center;
+        color:white;
+        background-color: black;
+    }
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    a {
+        text-decoration: none;
+        color:white;
+    }
+    .zoom {
+        transition: transform .2s; /* Animation */
+    }
+    .zoom:hover {
+      transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+</style>
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+<body>
+    <div class="center">
+        <div data-aos="zoom-out">
+            <h1>Welcome to Buzz Bee!</h1>
+            <a data-scroll href="#more">&#8623;</a>
+        </div>
+    </div>
+    
+    <div id="more" style="margin-top:100%;margin-bottom:25%;">
+        &nbsp;
+    </div>
+    <div data-aos="fade-down" style="margin-bottom: 50%;">
+        <div>
+            <h3>What is Buzz Bee?</h3>
+            <p>Buzz Bee is a premium spelling bee study tool, made by regional spelling bee finalists and developers.</p>
+        </div>
+        <a data-scroll href="#more2">&#8623;</a>
+    </div>
+
+    <div id="more2" style="margin-top:100%;margin-bottom:25%;">
+        &nbsp;
+    </div>
+    <div data-aos="fade-down" style="margin-bottom: 50%;">
+        <div>
+            <h3>How Does It Work?</h3>
+            <p>Every year, Buzz Bee has a new, updated list of Scripps spelling bee words added to the app.</p>
+        </div>
+        <a data-scroll href="#more3">&#8623;</a>
+    </div>
+
+    <div id="more3" style="margin-top:100%;margin-bottom:25%;">
+        &nbsp;
+    </div>
+    <div data-aos="fade-down" style="margin-bottom: 50%;">
+        <div>
+            <h3>Study View</h3>
+            <p>In study view, you study words</p>
+        </div>
+        <a data-scroll href="#socials">&#8623;</a>
+    </div>
+
+    <div data-aos="flip-left" id="socials">
+        <h3>Socials</h3>
+    </div>
+    &nbsp;
+    <div style="text-align: center;" data-aos="zoom-in">
+        <a href="mailto: dolchan@gmail.com">
+            <img class="zoom" src="https://docs.google.com/drawings/d/e/2PACX-1vQ9SaS0JzNK9vydnrJD2CxY_NpsEbgxarUQnVnNOH2DFLa-lxYyKeFHBWhEUbH9wD620TP69ox3fTZf/pub?w=960&h=720" style="width:10%" />
+        </a>
+        <a href="https://discord.gg/N6ZsWBsN9u">
+            <img class="zoom" src="https://docs.google.com/drawings/d/e/2PACX-1vQD3slq9-ss_vxVBlg6_B5BcCbGzgE20E5zUovtMaYvbSNfGGeZw0eCttiHY7J6xn4UkYsTg8d__GBV/pub?w=960&h=720" style="width:10%" />
+        </a>
+    </div>
+    <p style="margin-bottom:45%"></p>
+
+    </div>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>    
+</body>
